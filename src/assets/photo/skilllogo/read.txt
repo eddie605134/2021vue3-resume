@@ -1,0 +1,49 @@
+.bg-ai {
+    width: 148px; height: 144px;
+    background: url('css_sprites.png') -10px -155px;
+}
+
+.bg-css {
+    width: 141px; height: 144px;
+    background: url('css_sprites.png') -534px -174px;
+}
+
+.bg-docker {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -206px -10px;
+}
+
+.bg-jest {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -370px -10px;
+}
+
+.bg-js {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -10px -319px;
+}
+
+.bg-node {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -174px -319px;
+}
+
+.bg-ps_ {
+    width: 134px; height: 144px;
+    background: url('css_sprites.png') -10px -483px;
+}
+
+.bg-react {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -338px -319px;
+}
+
+.bg-sass {
+    width: 176px; height: 125px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+.bg-vue {
+    width: 144px; height: 144px;
+    background: url('css_sprites.png') -534px -10px;
+}
