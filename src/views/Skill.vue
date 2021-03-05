@@ -17,6 +17,7 @@
       <router-view />
     </div>
 
+    <!-- pc size -->
     <div class="check-skill">
       <div class="check-skill-inner">
         <router-link 
@@ -169,6 +170,10 @@ export default {
           align-items: center;
           box-shadow: 3px 3px 1px #000000;
           transition: .5s;
+          &:hover {
+            box-shadow: 0px 5px 4px -4px $text-color-indeep;
+            color: lighten($link-color, 3);
+          }
           @media (max-width: 1120px) {
             width: 120px;
             height: 120px;

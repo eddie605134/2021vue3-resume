@@ -80,7 +80,6 @@ export default {
       try {
         const { data } = await loadData();
         resumeData.data = data
-        console.log(data);
       } catch (error) {
         console.error(error)
       }
