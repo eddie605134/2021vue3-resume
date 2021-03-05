@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 #app {
   width: 100%;
+  min-width: 360px;
   font-family: 'Noto Sans TC', sans-serif;
   color: #2c3e50;
 }
