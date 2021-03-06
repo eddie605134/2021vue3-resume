@@ -8,13 +8,13 @@ const routes = [
     component: Home
   },
   {
-    path: '/skill',
+    path: '/skill/:skill?',
     name: 'Skill',
     component: () => import(/* webpackChunkName: "Skill" */ '../views/Skill.vue'),
-    redirect: '/skill/opition/1',
+    redirect: '/skill/1/opition',
     children: [
       {
-        path: "opition/:skill?",
+        path: "opition",
         name: "Skill_opition",
         // alias: '',
         component: () => import('../views/Skill/_opition')
