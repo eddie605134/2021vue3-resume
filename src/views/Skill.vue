@@ -54,7 +54,7 @@ export default {
     const opitionKey = ref(1)
 
     const selectRoute = () => {
-      router.push({name: 'Skill', params:{skill: opitionKey.value}})
+      router.push({name: 'Skill_opition', params:{skill: opitionKey.value}})
     }
 
     watch(
