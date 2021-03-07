@@ -48,7 +48,7 @@ export default {
     ]
 
     const sentence = hightlight`
-      &ensp;&ensp;&ensp;&ensp;我是一位前端工程師，主要作業內容有JS與前端框架做網頁開發、維護原有網站、串接來自後端的API渲染頁面，以及處理QA回傳的BUG。之前主要使用 ${tempStrArr[0]['text']} (${tempStrArr[1]['text']}) 作為開發框架，空閒時喜歡看youtube裡codetuber們用JS或SCSS實現有趣的動畫效果。<br />
+      &ensp;&ensp;&ensp;&ensp;我是一位前端工程師，主要作業內容為使用JS與前端框架做網頁開發、維護原有網站、串接來自後端的API渲染頁面，以及處理QA回傳的BUG。之前主要使用 ${tempStrArr[0]['text']} (${tempStrArr[1]['text']}) 作為開發框架，空閒時喜歡看youtube裡codetuber們用JS或SCSS實現有趣的動畫效果。<br />
       <br/>
       之前為了比較當前熱門框架間的差異與優缺點，自學了All in Js的熱門框架${tempStrArr[2]['text']}，欲一睹去年社群上讚譽有佳的Hooks，之後接觸${tempStrArr[3]['text']}時發現新推出的composition api寫法中擁有非常多Hooks的身影，甚至生態圈的${tempStrArr[4]['text']}與${tempStrArr[5]['text']}也都坐擁了hooks的大腿，也就沒有從2.x版轉移到3.x版的震痛了，並希望之後能將其應用在工作項目中。 <br/>
       <br/>
