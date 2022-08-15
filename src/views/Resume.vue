@@ -59,7 +59,7 @@ export default {
     const modalContent = ref('')
 
     const loadData = () => {
-      return axios.get('https://eddie605134.github.io/romon30/resumenew.json')
+      return axios.get('https://eddie605134.github.io/romon30/resumePortfolio/resumePortfolio.json')
     }
 
     const closeModal = () => {

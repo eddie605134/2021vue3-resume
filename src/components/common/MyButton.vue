@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div 
     :class="['button', props.type]">
     <div class="button-text">{{ props.text }}</div>
