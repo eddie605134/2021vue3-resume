@@ -1,14 +1,12 @@
 <template>
   <div class="home">
-    <Readme />
-
+    <Target />
     <div class="motto">
       <div class="motto-content">
-        遇見新技術就好奇&nbsp;&nbsp;&nbsp;&nbsp;面對新挑戰就勇敢
+        一步一腳印
       </div>
     </div>
-
-    <Target />
+    <Readme />
     <Avatar />
   </div>
 </template>
@@ -34,9 +32,9 @@ export default {
   padding-left: 40px;
   display: grid;
   grid-template-columns: calc(61.8% - 10px) calc(38.2% - 10px);
-  grid-template-rows: calc(22.2% - 15px) calc(5% - 15px) 72.8%;
+  grid-template-rows: 72.8% calc(5% - 15px) calc(22.2% - 15px);
   grid-auto-flow: column;
-  gap: 15px 20px;
+  gap: 0px 20px;
   @media (max-width: 560px) {
     padding-left: unset;
     padding: 80px 20px 20px 20px;
@@ -48,7 +46,6 @@ export default {
 .motto {
   width: 100%;
   height: 100%;
-  padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,11 +53,10 @@ export default {
   &-content {
     width: 95%;
     margin: auto;
-    padding-top: 5px;
     text-align: center;
     font-size: $home-title;
     font-weight: 500;
-    text-shadow: 2px 2px 6px lighten($text-color-indeep, 10) ;
+    /* text-shadow: 1px 1px 2px lighten($text-color-indeep, 10) ; */
     @media (max-width: 560px) {
       font-size: 16px;
     }

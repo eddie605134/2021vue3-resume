@@ -10,6 +10,8 @@
     <span class="gray"></span>
     待學
   </div>
+  
+  
   <div class="skill-chart-area">
     <div class="chart" ref="bar"></div>
   </div>

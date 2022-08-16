@@ -43,10 +43,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 6px;
   color: azure;
   cursor: pointer;
+  box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+  &:active {
+    box-shadow: unset;
+  }
   &.back{
     background: $warn-color;
     &:hover {
@@ -70,7 +75,7 @@ export default {
     }
   }
   &.watch{
-    background: #1a64b9;
+    background: #277fd7;
     .button-icon {
       padding-left: 3px ;
       padding-top: 1px ;

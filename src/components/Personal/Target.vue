@@ -15,44 +15,77 @@ export default {
   name: 'target',
   setup () {
     const hightlight = (strs, ...args)=> {
-      const hightlighted = args.map((arg, index) => 
-      (`<span style="color: ${tempStrArr[index]['color']}">${arg}</span>`))
+      console.log(strs);
+      const hightlighted = args.map((arg, index) => {
+        const theSkill = tempStrArr.find(item => item.text === arg)
+        if (theSkill) {
+          return `<span style="color: ${theSkill['color']};text-decoration: underline ${theSkill['color']};">${arg}</span>`
+        } else {
+          return arg
+        }
+      })
       
-      return strs.reduce((pre, cur, index) =>`${pre}${cur}${hightlighted[index] ?? ''}`, '')
+      return strs.reduce((pre, cur, idx) =>(`${pre}${cur}${hightlighted[idx] ?? ''}`), '')
     }
     const tempStrArr = [
       {
         text: 'Nuxt',
-        color: '#338b64'
+        color: '#338b64',
+        key: 1
       },
       {
-        text: 'Vue2.x',
-        color: '#338b64'
+        text: 'Vue2',
+        color: '#338b64',
+        key: 2
       },
       {
-        text: 'React 17^',
-        color: 'rgb(37, 145, 175)'
+        text: 'React',
+        color: 'rgb(37, 145, 175)',
+        key: 4
       },
       {
         text: 'Vue3',
-        color: '#338b64'
+        color: '#338b64',
+        key: 5
       },
       {
-        text: 'vue-router',
-        color: '#338b64'
+        text: 'Typescript',
+        color: '#0076c6',
+        key: 6
       },
       {
-        text: 'vuex',
-        color: '#338b64'
-      },
+        text: 'Tailwind',
+        color: '#05afce',
+        key: 7
+      }
     ]
 
     const sentence = hightlight`
-      &ensp;&ensp;&ensp;&ensp;我是一位前端工程師，主要作業內容為使用JS與前端框架做網頁開發、維護原有網站、串接來自後端的API渲染頁面，以及處理QA回傳的BUG。之前主要使用 ${tempStrArr[0]['text']} (${tempStrArr[1]['text']}) 作為開發框架，空閒時喜歡看youtube裡codetuber們用JS或SCSS實現有趣的動畫效果。<br />
-      <br/>
-      之前為了比較當前熱門框架間的差異與優缺點，自學了All in Js的熱門框架${tempStrArr[2]['text']}，欲一睹去年社群上讚譽有佳的Hooks，之後接觸${tempStrArr[3]['text']}時發現新推出的composition api寫法中擁有非常多Hooks的身影，甚至生態圈的${tempStrArr[4]['text']}與${tempStrArr[5]['text']}也都坐擁了hooks的大腿，也就沒有從2.x版轉移到3.x版的震痛了，並希望之後能將其應用在工作項目中。 <br/>
-      <br/>
-      身處在水深又多變的前端領域裡，我目前擁有的技術及知識量不過九牛一毛，面對變化的方法就是熟悉與改變，短期希望能掌握TypeScript並在專案上有使用機會、學習Design Pattern以及PWA相關知識以及用reactNative做手機APP，中期希望使用WebGL開發網頁動畫或遊戲、學第二語言如Python做數據分析(如分析股市工具、或影像辨識)、並補齊資料結構與演算法基礎，並期許自己在不斷學習的過程保有熱忱。(2021/2月)
+      目前是一位前端工程師，主要工作內容為: 
+      <ul>
+        <li>1.使用Javasctipt框架開發網頁與系統前端。</li>
+        <li>2.跨部門溝通協作以及同部門共同開發時git合併。</li>
+        <li>3.透過串接後端的API渲染頁面，讓client端使用者操作資料的存寫。</li>
+        <li>4.維護既有網站與新模組擴建。</li>
+        <li>5.解決QA與使用者回報之問題。</li>
+      </ul><br />
+      工作上有使用${tempStrArr[1]['text']}與${tempStrArr[0]['text']}開發網頁與系統的經驗，包含有：<br />
+      處理頁面路由系統權限，驗證前端資料，<br />
+      多國語系或RWD等其他指定工作項目，<br />
+      研究公司購買之付費工具之原文文獻，加以在專案中實作各種功能等。<br />
+      <br />
+
+      空閒時會看youtube裡codetuber們分享新資訊，<br />
+      平時也透過訂閱dev新聞或透過其他開發者在社群分享等管道，<br />
+      獲取新的開發資訊與技術文章。<br />
+      會購買Udemy、Hahow、六角課程進修，<br />
+      也會適當的踏青健身游泳旅行，調節身心平衡與放鬆，<br />
+      維持自己的生活品質與健康狀態。<br />
+      <br />
+
+      目前對於${tempStrArr[2]['text']}、${tempStrArr[3]['text']}、${tempStrArr[4]['text']}、${tempStrArr[5]['text']}有興趣，<br />
+      並有自己看課程研究與實作作品，<br />
+      希望有機會能用${tempStrArr[2]['text']}、${tempStrArr[3]['text']}、${tempStrArr[4]['text']}、${tempStrArr[5]['text']}等技術開發專案的機會。<br />
     `
 
     return {
@@ -65,7 +98,7 @@ export default {
 .target {
   width: 100%;
   height: 100%;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;

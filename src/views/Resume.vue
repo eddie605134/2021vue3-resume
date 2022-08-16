@@ -25,7 +25,12 @@
             <div class="card-img-title">{{ item.name }}</div>
             <Suspense>
               <template #default >
-                <img :src="item.img" :alt="item.name">
+                <div 
+                  class="card-background" 
+                  :style="`background-image: url('${item.img}')`"
+                  @click="goPage(item.page)"
+                >
+                </div>
               </template >
               <template #fallback >
                 <img src="@/assets/photo/material/load.gif" alt="鳩斗">
@@ -33,7 +38,7 @@
             </Suspense>
           </div>
           <div class="card-btns">
-            <MyButton type="watch" text="查看" @click="openModal(item)"/>
+            <MyButton type="watch" text="細節" @click="openModal(item)"/>
             <MyButton type="go" text="前往" @click="goPage(item.page)"/>
           </div>
         </div>
@@ -98,6 +103,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.aaa {
+  transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity .5s;
@@ -118,23 +127,24 @@ export default {
     padding: 80px 0 20px 0;
   }
   &-inner {
-    width: 70%;
     margin: 0 auto;
-    padding: 60px;
+    padding: 30px;
     background: url('~@/assets/photo/material/woodsmall.png');
     border-radius: 16px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 350px;
-    gap: 20px;
+    gap: 10px;
     @media (max-width: 1586px) {
-      grid-template-columns: repeat(2, 1fr);
+      width: 80%;
+      grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: 950px) {
-      padding: 60px 30px;
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      padding: 15px 15px;
     }
     @media (max-width: 560px) {
-      width: 85%;
       grid-template-columns: repeat(1, 1fr);
       padding: 30px 20px;
     }
@@ -144,12 +154,12 @@ export default {
     .card-padding {
       width: 100%;
       height: 100%;
-      padding: 10px 30px;
+      padding: 10px;
       @media (max-width: 1586px) {
-        padding: 10px 50px;
+        padding: 10px 10px;
       }
       @media (max-width: 1120px) {
-        padding: 10px 20px;
+        padding: 10px 10px;
       }
       @media (max-width: 950px) {
         padding: 10px 10px;
@@ -161,6 +171,7 @@ export default {
         border-radius: 16px; 
         box-shadow: 2px 2px 5px #000000;
         overflow: hidden;
+        cursor: pointer;
         &-img {
           width: 100%;
           height: 75%;
@@ -170,11 +181,13 @@ export default {
             padding: 10px 0 ;
             text-align: center;
             color: azure;
-            background-color: #8a744ac4;
+            background-color: $card-outside;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
+            z-index: 3;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0);
           }
           img {
             width: 100%;
@@ -189,9 +202,34 @@ export default {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-          background-color: rgb(221, 209, 189);
+          background-color: $card-outside;
         }
       }
+      .card-background {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        @media (max-width: 1586px) {
+          background-size: cover;
+        }
+        @media (max-width: 1120px) {
+          background-size: cover;
+        }
+        @media (max-width: 950px) {
+          background-size: cover;
+        }
+        @media (max-width: 560px) {
+          background-size: cover;
+        }
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+      }
+      
     }
   }
 }

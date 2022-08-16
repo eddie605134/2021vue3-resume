@@ -48,7 +48,8 @@ export default {
       width: 30%;
       height: 50%;
       padding: 20px;
-      background: rgba(247, 230, 186, 0.829);
+      background: url('~@/assets/photo/material/woodsmall.png');
+      border: 15px solid $card-outside;
       border-radius: 16px;
       display: flex;
       flex-direction: column;
@@ -67,10 +68,9 @@ export default {
       .close-btn {
         width: 30px;
         height: 30px;
-        border: 3px solid #ffffff;
         border-radius: 50%;
-        color: #ffffff;
-        font-size: 20px;
+        color: $modal-title;
+        font-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -84,15 +84,15 @@ export default {
         height: 15%;
         padding: 30px 0;
         font-size: 20px;
-        color: $text-color-indeep;
+        color: $modal-title;
         text-align: center;
       }
       &-content {
         width: 100%;
         height: 70%;
-        padding: 50px 60px 0 60px;
+        padding: 30px 30px 0 30px;
         font-size: 18px;
-        color: $link-color;
+        color: $modal-text-color;
       }
       &-btns {
         width: 100%;

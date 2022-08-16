@@ -34,7 +34,9 @@
     </div>
     <div class="skill-application">
       <div class="skill-application-inner">
-        &ensp;&ensp;&ensp;{{ introduction }}
+        製作完此頁面一年多後，深覺量化技能掌握度太過自大，<br/>
+        故將此頁面數據一律調成4，並把目前不會的技能去除<br/>
+        新的技能頁面 -> <a href="" style="color: black; text-decoration: none;">https://cheery-cucurucho-f89aa1.netlify.app/orders</a>
       </div>
     </div>
   </div>
@@ -116,7 +118,7 @@ export default {
     }
   }
   .check-skill {
-    padding: 10px 30px 10px 10px;
+    padding: 10px 20px 10px 20px;
     @media (max-width: 560px) {
       display: none;
     }
