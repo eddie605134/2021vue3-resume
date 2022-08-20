@@ -135,7 +135,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 350px;
     gap: 10px;
-    @media (max-width: 1586px) {
+    @media (max-width: 3000px) {
       width: 80%;
       grid-template-columns: repeat(3, 1fr);
     }

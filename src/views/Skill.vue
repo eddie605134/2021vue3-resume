@@ -36,7 +36,7 @@
       <div class="skill-application-inner">
         製作完此頁面一年多後，深覺量化技能掌握度太過自大，<br/>
         故將此頁面數據一律調成4，並把目前不會的技能去除<br/>
-        新的技能頁面 -> <a href="https://cheery-cucurucho-f89aa1.netlify.app/orders" target="_blank"></a> style="color: black; text-decoration: none;">https://cheery-cucurucho-f89aa1.netlify.app/orders</a>
+        新的技能頁面 -> <a href="https://cheery-cucurucho-f89aa1.netlify.app/orders" target="_blank" style="color: black; text-decoration: none;">https://cheery-cucurucho-f89aa1.netlify.app/orders</a>
       </div>
     </div>
   </div>
